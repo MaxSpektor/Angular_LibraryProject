@@ -1,0 +1,30 @@
+<div class="body" [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : 'rgb(255,255,255)'}">
+    <form class="AddContainer" #newBookform="ngForm" (ngSubmit)="onSubmit(newBookform)">
+        <img src="../assets/book.png" alt="">
+        <label for="name">
+            <input placeholder="Enter Book Title" type="text" name="Title" #book="ngModel" ngModel required>
+            <span *ngIf="(book.invalid && book.touched)" class="name-validatio-error" [ngStyle]="{'color' : 'red'}">
+                cannot be Empty</span>
+        </label>
+        <label for="author"> 
+            <input placeholder="Enter Book Author" type="text" name="Author" #author="ngModel" ngModel required>
+            <span *ngIf="(author.invalid && author.touched)" class="name-validatio-error" [ngStyle]="{'color' : 'red'}">
+                cannot be Empty</span>
+        </label>
+        <label for="tags"> 
+            <input placeholder="Enter Book Tags" type="text" name="Tags" #tags="ngModel" ngModel required>
+            <span *ngIf="(tags.invalid && tags.touched)" class="name-validatio-error" [ngStyle]="{'color' : 'red'}">
+                cannot be Empty</span>
+        </label>
+        <label for="quantity" pattern="[0-9]+$"> 
+            <input placeholder="Enter Book Quantity" type="text" name="Quantity" #Quantity="ngModel" ngModel required>
+            <span *ngIf="(Quantity.invalid && Quantity.touched)" class="name-validatio-error" [ngStyle]="{'color' : 'red'}">
+                cannot be Empty</span>
+        </label>
+        <label for="img" class="uploadImg">
+            <span>Upload Image</span>
+            <input type="file" (change)="getFile($event)" name="Img" #img="ngModel" ngModel>
+        </label>
+        <button [disabled]="newBookform.invalid" type="submit">Add Book</button>
+    </form>
+</div>

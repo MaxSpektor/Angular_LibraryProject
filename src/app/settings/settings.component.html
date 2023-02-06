@@ -1,0 +1,15 @@
+<div class="body" [ngStyle]="{backgroundColor: theme != true ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
+    <div class="themeMode">
+        <span class="light" [ngStyle]="{opacity : changeLight()}">Light</span>
+        <button (click)="changeToMode()">Change Theme Mode</button>
+        <span class="night" [ngStyle]="{opacity : changeNight()}">Night</span>
+    </div>
+    <div class="admin" [ngClass]="{'adminNight' : theme == false}">
+        <h4>Add new admin : </h4>
+        <input type="text" #AdminValue (keyup.enter)="addAdmin(AdminValue.value)" placeholder="Enter Admin">
+        <span *ngIf="admins.length === 2">maximum admins allowed : 2</span>
+        <div class="adminShow" *ngFor="let admin of admins">
+            <span>{{admin}}</span>
+        </div>
+    </div>
+</div>

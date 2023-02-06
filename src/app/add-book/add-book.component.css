@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.body {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: whitesmoke;
+}
+.AddContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 100px 0 100px 100px;
+    background-color: rgb(237, 224, 212,0.5);
+    /* background-color: transparent; */
+    /* background-blend-mode: lighten; */
+    z-index: 1;
+}
+.AddContainer img {
+    width: 255px;
+    position: absolute;
+    z-index: 0;
+    right: 120px;
+    opacity: 0.5;
+}
+.AddContainer::before {
+    position: absolute;
+    content: "Add New Book To Library :";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.AddContainer label {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    column-gap: 20px;
+}
+.AddContainer label input {
+    border-radius: 15px;
+    height: 35px;
+    width: 300px;
+    text-align: center;
+    color: #333;
+    font-size: 1em;
+    z-index: 0;
+}
+.AddContainer .uploadImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.AddContainer label input[type="file"] {
+    border-radius: 0px;
+    width: auto;
+    height: auto;
+}
+.AddContainer label input[type="file"]:empty {
+    color: rgb(168, 40, 40);
+}
+
+button {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    bottom: 10px;
+    right: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+button:valid:hover {
+    background-color: white;
+    color:#333;
+}
+button:disabled:hover {
+    background-color: rgb(132, 30, 30);
+    color:whitesmoke;
+}

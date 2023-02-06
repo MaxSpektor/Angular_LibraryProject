@@ -1,0 +1,29 @@
+<div class="body" >
+    <div class="containerSearch" [ngClass]="{'headerNight' : theme == false }">
+        <div class="search">
+            <div class="inputAndIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" #box id="search" name="name-input" placeholder="type to search"
+                    required>
+            </div>
+            <button class="btn" (click)="getValue(box.value)" type="submit">Search</button>
+        </div>
+    </div>
+    <div class="containerDisplay" [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
+        <div class="box" *ngFor="let book of booksDetails"
+        [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.1)' : '#ede0d4'}"
+        [ngStyle]="{color : theme == false ? '#333':'#333'}" >
+            <img [src]="book.imgUrl" alt="">
+            <div class="info">
+                <p><strong>Title :</strong> {{book.title}}</p>
+                <p><strong>Subtitle :</strong> {{book.subtitle}}</p>
+                <p><strong>Average rate :</strong> {{book.averageRating}}</p>
+                <p><strong>Publisher :</strong> {{book.publisher}}</p>
+                <p><strong>Language :</strong> {{book.language}}</p>
+                <p><strong>Pages Number :</strong> {{book.pageCount}}</p>
+                <p><strong>Rating count :</strong> {{book.ratingsCount}}</p>
+            </div>
+            <button type="button"><a href="{{book.previewLink}}">READ MORE</a></button>
+        </div>
+    </div>
+</div>
