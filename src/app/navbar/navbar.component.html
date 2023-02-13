@@ -1,32 +1,32 @@
-<div class="navigation" [ngClass]="{'navigationNight':theme != true,'navigationLight':theme == true}" >
-    <img src="../assets/ortBraude_preview_rev_1.png" [ngClass]="{'imgNight' : theme != true}" srcset="">
+<div class="navigation" [ngClass]="{'navigationNight':theme != 'light','navigationLight':theme === 'light'}" >
+    <img src="../assets/ortBraude_preview_rev_1.png" [ngClass]="{'imgNight' : theme != 'light'}" srcset="">
     <ul>
       <li class="list active" >
-        <a routerLink="" (click)="changeStatus('home')" [ngClass]="{'aNight' : theme != true, 'aLight' : theme == true }" [ngStyle]="{backgroundColor : changeclr1(), height : 'auto'}">
+        <a routerLink="" (click)="changeStatus('home')" [ngClass]="{'aNight' : theme != 'light', 'aLight' : theme === 'light' }" [ngStyle]="{backgroundColor : changeclr1(), height : 'auto'}">
           <span class="icon"><i  class="fa-solid fa-house"></i></span>
           <span class="title">Home</span>
         </a>
       </li>
       <li class="list">
-        <a routerLink="AddBook" (click)="changeStatus('addBook')" [ngClass]="{'aNight' : theme != true, 'aLight' : theme == true }" [ngStyle]="{backgroundColor : changeclr2(), height : 'auto'}">
+        <a routerLink="AddBook" (click)="changeStatus('addBook')" [ngClass]="{'aNight' : theme != 'light', 'aLight' : theme === 'light' }" [ngStyle]="{backgroundColor : changeclr2(), height : 'auto'}">
           <span class="icon"><i class="fa-solid fa-plus"></i></span>
           <span class="title">Add new book</span>
         </a>
       </li>
       <li class="list">
-        <a routerLink="InLibrary" (click)="changeStatus('InLibrary')" [ngClass]="{'aNight' : theme != true, 'aLight' : theme == true }" [ngStyle]="{backgroundColor : changeclr3(), height : 'auto'}">
+        <a routerLink="InLibrary" (click)="changeStatus('InLibrary')" [ngClass]="{'aNight' : theme != 'light', 'aLight' : theme === 'light' }" [ngStyle]="{backgroundColor : changeclr3(), height : 'auto'}">
           <span class="icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
           <span class="title">Books from library</span>
         </a>
       </li>
       <li class="list">
-        <a routerLink="OutOfLibrary" (click)="changeStatus('OutOfLibrary')" [ngClass]="{'aNight' : theme != true, 'aLight' : theme == true }" [ngStyle]="{backgroundColor : changeclr4(), height : 'auto'}">
+        <a routerLink="OutOfLibrary" (click)="changeStatus('OutOfLibrary')" [ngClass]="{'aNight' : theme != 'light', 'aLight' : theme === 'light' }" [ngStyle]="{backgroundColor : changeclr4(), height : 'auto'}">
           <span class="icon rotate"><i class="fa-solid fa-arrow-right-to-bracket"></i></span>
           <span class="title">Books outside the library</span>
         </a>
       </li>
       <li class="list settings">
-        <a routerLink="Settings" (click)="changeStatus('Settings')" [ngClass]="{'aNight' : theme != true, 'aLight' : theme == true }" [ngStyle]="{backgroundColor : changeclr5(), height : 'auto'}">
+        <a routerLink="Settings" (click)="changeStatus('Settings')" [ngClass]="{'aNight' : theme != 'light', 'aLight' : theme === 'light' }" [ngStyle]="{backgroundColor : changeclr5(), height : 'auto'}">
           <span class="icon"><i class="fa-solid fa-gear"></i></span>
           <span class="title">settings</span>
         </a>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { BooksService } from '../books.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { BooksService } from '../books.service';
   templateUrl: './out-of-library.component.html',
   styleUrls: ['./out-of-library.component.css']
 })
-export class OutOfLibraryComponent {
+export class OutOfLibraryComponent{
 
   searchUrl: string = ''
 
@@ -26,7 +26,7 @@ export class OutOfLibraryComponent {
     this.theme = this.booksService.returnTheme()
   }
 
-  theme: boolean = true
+  theme: string = 'light'
 
 
   // using func get request to api in service 

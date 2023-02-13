@@ -31,7 +31,8 @@ export class BooksService {
 
   allBooks: { items: { selfLink: string }[] } | undefined;
 
-  constructor(private http: HttpClient, private toast: NgToastService) { }
+  constructor(private http: HttpClient, private toast: NgToastService) {
+   }
 
 
   // calling from out-of-library COMPONENT
@@ -128,14 +129,17 @@ export class BooksService {
 
 
 
-  themeModeTemp : boolean = true
+  themeModeTemp : string = 'light'
 
 
-    changeToMode = (val:boolean) => {
-      if (this.themeModeTemp != true)
-        this.themeModeTemp = true
+    changeToMode = (val:string) => {
+      if (this.themeModeTemp != 'light')
+        this.themeModeTemp = 'light'
       else
-        this.themeModeTemp = false
+        this.themeModeTemp = 'dark'
+
+      // let dataTheme = {theme : this.themeModeTemp};
+      // localStorage.setItem('themeMode',JSON.stringify(dataTheme))
       return this.themeModeTemp
     }
 

@@ -18,7 +18,7 @@ export class InLibraryComponent implements OnInit {
     Image: string;
   }[] = []
 
-  theme:boolean = true;
+  theme:string = 'light'
 
   constructor(private bookService: BooksService) {
     this.BooksArray = this.bookService.getBookArray();

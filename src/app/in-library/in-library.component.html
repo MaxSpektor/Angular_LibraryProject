@@ -1,11 +1,11 @@
-<div class="body" [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
-    <div class="header" [ngClass]="{'headerNight' : theme == false }">
-        <h2 [ngStyle]="{color : theme == false ? 'rgba(245,245,245)' : '#333'}">BOOKS - IN - LIBRARY</h2>
+<div class="body" [ngStyle]="{backgroundColor : theme === 'dark' ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
+    <div class="header" [ngClass]="{'headerNight' : theme === 'dark' }">
+        <h2 [ngStyle]="{color : theme === 'dark' ? 'rgba(245,245,245)' : '#333'}">BOOKS - IN - LIBRARY</h2>
     </div>
     <div class="containerDisplay" >
         <div class="box" *ngFor="let book of BooksArray" 
-        [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : '#ede0d4'}"
-        [ngStyle]="{color : theme == false ? '#333':'#333'}" >
+        [ngStyle]="{backgroundColor : theme === 'dark' ? 'rgba(70,70,70,0.5)' : '#ede0d4'}"
+        [ngStyle]="{color : theme === 'dark' ? '#333':'#333'}" >
             <img [src]="book.Image" alt="">
             <h3><strong>Title :</strong> {{book.Title}} </h3>
             <h3><strong>Author :</strong> {{book.Author}}</h3>

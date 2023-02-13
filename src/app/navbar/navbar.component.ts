@@ -11,7 +11,6 @@ export class NavbarComponent implements OnInit, DoCheck {
   constructor(private bookService : BooksService) {
    }
   ngDoCheck(): void {
-    // this.bookService.CurrectThemeMode.subscribe(theme => this.theme = theme)
     this.theme = this.bookService.returnTheme()
   }
 
@@ -19,7 +18,7 @@ export class NavbarComponent implements OnInit, DoCheck {
   ngOnInit(): void {
   }
 
-  theme:boolean = true
+  theme:string = 'light'
 
   li1: string = ''
 

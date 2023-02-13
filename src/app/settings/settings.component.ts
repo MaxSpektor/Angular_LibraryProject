@@ -10,7 +10,7 @@ import { BooksService } from '../books.service';
 })
 export class SettingsComponent implements OnInit {
 
-  theme: boolean = true
+  theme: string = 'light'
 
   constructor(private bookService: BooksService) {
     this.theme = this.bookService.themeModeTemp
@@ -22,10 +22,10 @@ export class SettingsComponent implements OnInit {
 
 
   changeNight() {
-    return this.theme === false ? '1' : '0.5'
+    return this.theme === 'dark' ? '1' : '0.5'
   }
   changeLight() {
-    return this.theme === true ? '1' : '0.5'
+    return this.theme === 'light' ? '1' : '0.5'
   }
 
   admins: String[] = []

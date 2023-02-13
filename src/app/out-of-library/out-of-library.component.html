@@ -1,5 +1,5 @@
 <div class="body" >
-    <div class="containerSearch" [ngClass]="{'headerNight' : theme == false }">
+    <div class="containerSearch" [ngClass]="{'headerNight' : theme === 'dark' }">
         <div class="search">
             <div class="inputAndIcon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -9,10 +9,10 @@
             <button class="btn" (click)="getValue(box.value)" type="submit">Search</button>
         </div>
     </div>
-    <div class="containerDisplay" [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
+    <div class="containerDisplay" [ngStyle]="{backgroundColor : theme === 'dark' ? 'rgba(70,70,70,0.5)' : '#ede0d4'}">
         <div class="box" *ngFor="let book of booksDetails"
-        [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.1)' : '#ede0d4'}"
-        [ngStyle]="{color : theme == false ? '#333':'#333'}" >
+        [ngStyle]="{backgroundColor : theme === 'dark' ? 'rgba(70,70,70,0.1)' : '#ede0d4'}"
+        [ngStyle]="{color : theme == 'dark' ? '#333':'#333'}" >
             <img [src]="book.imgUrl" alt="">
             <div class="info">
                 <p><strong>Title :</strong> {{book.title}}</p>

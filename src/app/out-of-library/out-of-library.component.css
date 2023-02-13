@@ -122,6 +122,21 @@
     background-color: #ede0d4;
 }
 
+@media screen and (max-width: 1000px) {
+    .containerDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+    .containerDisplay .box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .containerDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        
+    }
+}
 
 .containerDisplay .box {
     width: auto;

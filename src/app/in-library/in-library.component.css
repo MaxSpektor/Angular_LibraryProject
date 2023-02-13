@@ -57,6 +57,29 @@ h2 {
     overflow-y: auto;
 }
 
+@media screen and (max-width: 1200px) {
+    .containerDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .containerDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+    .containerDisplay .box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .containerDisplay {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        
+    }
+}
+
 .containerDisplay .box {
     background-color: rgba(255, 255, 255, 0.1);
     width: auto;

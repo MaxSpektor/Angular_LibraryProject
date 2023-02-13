@@ -1,4 +1,4 @@
-<div class="body" [ngStyle]="{backgroundColor : theme == false ? 'rgba(70,70,70,0.5)' : 'rgb(255,255,255)'}">
+<div class="body" [ngStyle]="{backgroundColor : theme === 'dark' ? 'rgba(70,70,70,0.5)' : 'rgb(255,255,255)'}">
     <form class="AddContainer" #newBookform="ngForm" (ngSubmit)="onSubmit(newBookform)">
         <img src="../assets/book.png" alt="">
         <label for="name">

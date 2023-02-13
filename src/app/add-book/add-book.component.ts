@@ -14,7 +14,7 @@ export class AddBookComponent implements OnInit {
     this.theme = this.bookService.returnTheme();
   }
 
-  theme : boolean = true;
+  theme : string = 'light'
 
   file: any;
 

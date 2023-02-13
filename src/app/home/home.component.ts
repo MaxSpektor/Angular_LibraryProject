@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     this.theme = this.bookService.returnTheme()
    }
 
-  theme:boolean = true
+  theme:string = 'light'
   ngOnInit(): void {
   }
 
