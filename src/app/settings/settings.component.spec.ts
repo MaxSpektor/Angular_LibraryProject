@@ -25,9 +25,9 @@ describe('SettingsComponent', () => {
   });
 
   it('check theme',()=> {
-    expect(component.theme).toBe(true);
+    expect(component.theme).toBe('light');
     component.changeToMode();
-    expect(component.theme).toBe(false)
+    expect(component.theme).toBe('dark')
   })
 
   it('add Admin Function',()=>{

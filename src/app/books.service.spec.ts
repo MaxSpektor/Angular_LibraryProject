@@ -23,12 +23,12 @@ describe('BooksService', () => {
   });
 
   it('change theme mode',() => {
-    expect(service.themeModeTemp).toBe(true);
-    service.changeToMode(false);
-    expect(service.themeModeTemp).toBe(false);
+    expect(service.themeModeTemp).toBe('light');
+    service.changeToMode('dark');
+    expect(service.themeModeTemp).toBe('dark');
   })
 
   it('return theme function',()=> {
-    expect(service.themeModeTemp = service.returnTheme()).toBe(true)
+    expect(service.themeModeTemp = service.returnTheme()).toBe('light')
   })
 });
